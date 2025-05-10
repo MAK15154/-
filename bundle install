@@ -1,0 +1,15 @@
+$ bundle install
+Fetching gem metadata from https://rubygems.org/........
+Bundler found mismatched checksums. This is a potential security risk.
+  rake (13.2.1) sha256=46cb38dae65d7d74b6020a4ac9d48afed8eb8149c040eccf0523bec91907059d
+    from the lockfile CHECKSUMS at Gemfile.lock:1241:17
+    and the API at https://rubygems.org/
+  rake (13.2.1) sha256=17e8b7c1b247f3349d4a7160c3f587b6c7fd67cf7be3b3710e118b8416f94ddb
+    from the gem at /my/repo/vendor/cache/rake-13.2.1.gem
+
+If you trust the lockfile CHECKSUMS at Gemfile.lock:1241:17, to resolve this issue you can:
+  1. remove the gem at /my/repo/vendor/cache/rake-13.2.1.gem
+  2. run `bundle install`
+
+To ignore checksum security warnings, disable checksum validation with
+  `bundle config set --local disable_checksum_validation true`
